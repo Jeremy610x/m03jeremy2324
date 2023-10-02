@@ -39,6 +39,10 @@ public class ExerciciMeses {
                     case 'A':
                 System.out.println("Abril");
                 break;
+                     case 'y':
+                    case 'Y':
+                System.out.println("yellow");
+                break;
                 
             default:
                 System.out.println("Letra  no valida");
