@@ -43,6 +43,11 @@ public class ExerciciMeses {
                     case 'Y':
                 System.out.println("yellow");
                 break;
+                  case 'r':
+                    case 'R':
+                System.out.println("RED");
+                break;
+                
                 
             default:
                 System.out.println("Letra  no valida");
