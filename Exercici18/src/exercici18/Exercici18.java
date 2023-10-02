@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author geova
+ * @author jepa2698
  */
 public class Exercici18 {
 
@@ -17,30 +17,29 @@ public class Exercici18 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    double horas,t_normal=20,horas_normal=35,salario;  
-    
-    Scanner sc = new Scanner (System.in);
-    
-        System.out.println("Escribe las horas trabajadas ...");
-        horas = sc.nextDouble();
-        if(horas>horas_normal){
-        double h_extra = horas - horas_normal;
-        double salario_extra = h_extra * t_normal *1.5;
-        double salario_normal = horas_normal*t_normal;
-        salario = salario_extra +salario_normal;        
-                
+        
+        double horas,calculo,tarifanormal=20;    
+        char nombre;
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Dime tu nombre...");
+        nombre = sc.next().charAt(0);
+        System.out.println("Horas trabajadas?");
+        horas=sc.nextInt();
         
         
+        if(horas>=35){
+        calculo = horas * tarifanormal * 1.5;
+        
+        }else{
+        
+        calculo = horas*tarifanormal;
         }
-        else{
+  
         
-        salario = horas*t_normal;
-        }
         
-        System.out.println("Tienes de salario " + salario);
-    
-    
+        System.out.println( "Señor/a " + nombre + " tienes de salario " + calculo);
+       
+        
     }
-    
     
 }
