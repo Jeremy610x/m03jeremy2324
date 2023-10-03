@@ -17,29 +17,39 @@ public class Exercici18 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        double horas,calculo,tarifanormal=20;    
-        char nombre;
-        Scanner sc = new Scanner (System.in);
-        System.out.println("Dime tu nombre...");
-        nombre = sc.next().charAt(0);
-        System.out.println("Horas trabajadas?");
-        horas=sc.nextInt();
-        
-        
-        if(horas>=35){
-        calculo = horas * tarifanormal * 1.5;
-        
-        }else{
-        
-        calculo = horas*tarifanormal;
-        }
-  
-        
-        
-        System.out.println( "Señor/a " + nombre + " tienes de salario " + calculo);
-       
+     int horas,h_extra;
+     double t_normal=20;
+    int horas_normal=35;
+     double precio_extra=1.5;
+     double salario,salario_extra;
+     
+     Scanner sc = new Scanner(System.in);
+        System.out.println("Cuantas horas trabajas ? ");
+     horas = sc.nextInt();
+     
+     if (horas>horas_normal){
+     
+      h_extra = horas - horas_normal;
+      
+      salario_extra = h_extra * t_normal *1.5;
+     double salario_normal = horas_normal *t_normal;
+      
+     
+     salario = salario_extra + salario_normal;
+
+     
+     }
+     else{
+     
+     salario = horas * t_normal;
+     }
+     
+     
+     
+     
+        System.out.println("Tienes de salario " + salario );
+    }
         
     }
-    
-}
+
+
