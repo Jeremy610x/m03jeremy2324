@@ -18,10 +18,10 @@ public class Exercici18 {
     public static void main(String[] args) {
         // TODO code application logic here
      int horas,h_extra;
-     double t_normal=20;
     int horas_normal=35;
-     double precio_extra=1.5;
-     double salario,salario_extra;
+     final double t_normal=20;
+     final double precio_extra=1.5;
+     double salario,salario_extra,salario_normal;
      
      Scanner sc = new Scanner(System.in);
         System.out.println("Cuantas horas trabajas ? ");
@@ -31,25 +31,20 @@ public class Exercici18 {
      
       h_extra = horas - horas_normal;
       
-      salario_extra = h_extra * t_normal *1.5;
-     double salario_normal = horas_normal *t_normal;
+      salario_extra = h_extra * t_normal *precio_extra;
+      salario_normal = horas_normal *t_normal;
       
      
      salario = salario_extra + salario_normal;
-
-     
      }
      else{
      
      salario = horas * t_normal;
      }
-     
-     
-     
-     
+ 
         System.out.println("Tienes de salario " + salario );
     }
-        
+     //ampliacio impuestos   
     }
 
 
