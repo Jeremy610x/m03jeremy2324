@@ -17,8 +17,12 @@ public class Exercici18 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        
      int horas,h_extra;
-    int horas_normal=35;
+     int horas_normal=35;
+     
      final double t_normal=20;
      final double precio_extra=1.5;
      double salario,salario_extra,salario_normal;
@@ -30,21 +34,54 @@ public class Exercici18 {
      if (horas>horas_normal){
      
       h_extra = horas - horas_normal;
-      
+            
       salario_extra = h_extra * t_normal *precio_extra;
       salario_normal = horas_normal *t_normal;
       
      
      salario = salario_extra + salario_normal;
+   
      }
+     
      else{
      
      salario = horas * t_normal;
      }
  
-        System.out.println("Tienes de salario " + salario );
+        System.out.println("Tienes de salario bruto ...  " + salario );
+    
+    final int SALARIOSINIMPUESTOS =500;
+    final int SALARIOTOPEIMPUESTO =900;
+    double impuestos = 0;
+ 
+    double Salario_impuestos,Salarios_topeimpuesto;
+    //calcul impuestos
+      if (salario>SALARIOTOPEIMPUESTO){
+      
+      }
+     if (salario>SALARIOSINIMPUESTOS){
+              Salario_impuestos = salario - SALARIOSINIMPUESTOS;
+              
+              impuestos =(Salario_impuestos * 25)/100;
+              System.out.println("Impuestos ..." + impuestos);
+     }
+     else{
+     impuestos=0;
+     }
+     salario = salario - impuestos;
+        System.out.println("SALARIO NETO ... " + salario);
+    
+    
     }
-     //ampliacio impuestos   
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
 
 
